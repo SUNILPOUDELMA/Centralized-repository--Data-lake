@@ -22,16 +22,16 @@ import pyspark.sql.functions as f
 •	    insurance_data = input_data + "insurance_data/*/*/*/*"
 •	    
 •	    # read auto insurance data file
-•	    df = spark.read.json(song_data, mode='PERMISSIVE', columnNameOfCorruptRecord='corrupt_record').drop_duplicates()
+•	    tt = spark.read.json(insurance_data, mode='PERMISSIVE', columnNameOfCorruptpolicy='corrupt_policy').drop_duplicates()
 •	    
 •	     # extract columns to create auto insurance table
-•	    auto_insurance_table = df.select("customer_id","state","city","effective_policy_year","coverage","gender","income","policytype","vehicle").drop_duplicates()
+•	    auto_insurance_table = tt.select("customer_id","state","city","effective_policy_year","coverage","gender","income","policytype","vehicle").drop_duplicates()
 •	    
 •	    # write insurance data table to parquet files partitioned by year and customer
 •	    auto_insurance_table.write.parquet(output_data + "quotes/", mode="overwrite", partitionBy=["effective_policy_year","customer_id"])
 •	
 •	    # extract columns to create customer table
-•	    customer_table = df.select("customer_id","customer_name","customer_location","customer_state","customer_income").drop_duplicates()
+•	    customer_table = tt.select("customer_id","customer_name","customer_location","customer_state","customer_income").drop_duplicates()
 •	
 •	    # write customer table to parquet files
 •	    customer_table.write.parquet(output_data + "customer/", mode="overwrite")
@@ -46,11 +46,11 @@ import pyspark.sql.functions as f
 •	    log_data = os.path.join(input_data, "log-data/")
 •	
 •	    # read log data file
-•	    df = spark.read.json(log_data, mode='PERMISSIVE', columnNameOfCorruptRecord='corrupt_record').drop_duplicates()
+•	    tt = spark.read.json(log_data, mode='PERMISSIVE', columnNameOfCorruptPolicy='corrupt_policy').drop_duplicates()
 •	
 •	   
 •	    # read in insurance data to use for customer table
-•	    song_df = spark.read\
+•	    insurance_tt = spark.read\
 •	                .format("parquet")\
 •	                .option("basePath", os.path.join(output_data, "customer/"))\
 •	                .load(os.path.join(output_data, "customer/*/*/"))
