@@ -20,13 +20,14 @@ Insurance companies- Sample data collected from five different auto insurance co
 •	Progressive. ...
 •	Farmers. ...
 •	Liberty Mutual. ...
-•	Nationwide.
+•	Nationwide
 
 Dimension Tables: Includes different attributes of customer
 
 YOUR CAR
 Your Driving Record
 How Much You Drive
+
 DEMOGRAPHIC FACTORS
 Where You Live and Park Your Car
 Your Age and Gender 
