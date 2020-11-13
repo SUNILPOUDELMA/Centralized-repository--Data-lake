@@ -4,7 +4,7 @@ A data lake is a centralized repository that allows you to store all your struct
 
 This project will focus on Auto Insurance data used by a startup company, 247Insurance. Customer has grown and management decided to move their data warehouse to a data lake. Location of data is in S3 has JSON logs directory and metadata on different quotes in their application.
 
-CREATE ETL PIPELINE
+--CREATE ETL PIPELINE
 
 1. Read data from source aka S3
 -- source here
@@ -24,19 +24,19 @@ Insurance companies- Sample data collected from five different auto insurance co
 
 Dimension Tables: Includes different attributes of customer
 
-YOUR CAR
-Your Driving Record
-How Much You Drive
+--YOUR CAR
+--Your Driving Record
+--How Much You Drive
 
-DEMOGRAPHIC FACTORS
-Where You Live and Park Your Car
-Your Age and Gender 
+--DEMOGRAPHIC FACTORS
+-Where You Live and Park Your Car
+-Your Age and Gender.
 
 THE COVERAGES, LIMITS AND DEDUCTIBLES YOU CHOOSE
-The Type of Coverage
-Your Limits and Deductibles
+-The Type of Coverage
+-Your Limits and Deductibles
 
 
 3. Load data
-Writes to S3(table directories)
+-Writes to S3(table directories)
 
