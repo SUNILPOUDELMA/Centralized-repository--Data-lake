@@ -1,1 +1,28 @@
+{
+  "name": "SimpleJson",
+  "id": "test-sample-json-datasource",
+  "type": "csvdatasource",
 
+  "partials": {
+    "config": "public/app/plugins/csvdatasource/simplejson/partials/config.html"
+  },
+
+  "metrics": true,
+  "annotations": true,
+
+  "info": {
+    "description": "simple json datasource",
+    "author": {
+      "name": "test",
+      "url": "https://test.com"
+    },
+    "logos": {
+      "small": "img/simpletestJson_logo.svg",
+      "large": "img/simpletestJson_logo.svg"
+    },
+    "links": [
+      {"name": "GitHub", "url": "https://"},
+      {"name": "License", "url": "https://"}
+    ]
+  }
+}
